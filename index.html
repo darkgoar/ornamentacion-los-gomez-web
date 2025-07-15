@@ -6,6 +6,8 @@
     <title>Ornamentación Los Gómez S.A.S.</title>
     <!-- Incluye Tailwind CSS desde CDN para un estilo rápido y responsivo -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Incluye Font Awesome para los iconos de estrellas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         /* Estilos personalizados para la fuente Inter */
@@ -67,6 +69,7 @@
                     <li><a href="#inicio" class="hover:text-orange-400 transition duration-300 ease-in-out rounded-md px-3 py-2">Inicio</a></li>
                     <li><a href="#servicios" class="hover:text-orange-400 transition duration-300 ease-in-out rounded-md px-3 py-2">Servicios</a></li>
                     <li><a href="#galeria" class="hover:text-orange-400 transition duration-300 ease-in-out rounded-md px-3 py-2">Galería</a></li>
+                    <li><a href="#testimonios" class="hover:text-orange-400 transition duration-300 ease-in-out rounded-md px-3 py-2">Testimonios ⭐</a></li>
                     <li><a href="#ideas-diseno" class="hover:text-orange-400 transition duration-300 ease-in-out rounded-md px-3 py-2">Ideas de Diseño ✨</a></li>
                     <li><a href="#contacto" class="hover:text-orange-400 transition duration-300 ease-in-out rounded-md px-3 py-2">Contacto</a></li>
                 </ul>
@@ -175,31 +178,66 @@
         </div>
     </section>
 
-    <!-- Nueva Sección: Generador de Ideas de Diseño con Gemini API -->
-    <section id="ideas-diseno" class="py-16 md:py-24 bg-gray-800 text-gray-100">
+    <!-- Nueva Sección: Testimonios -->
+    <section id="testimonios" class="py-16 md:py-24 bg-gray-800 text-gray-100">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-white mb-8">Generador de Ideas de Diseño ✨</h2>
-            <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-300">
+            <h2 class="text-4xl font-bold text-white mb-12">Lo que Dicen Nuestros Clientes ⭐</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-gray-900 rounded-xl shadow-lg p-6 border border-gray-700 flex flex-col items-center">
+                    <div class="text-orange-400 mb-3 text-2xl">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"¡Excelente trabajo! La puerta quedó espectacular, superó nuestras expectativas. Los recomiendo al 100%."</p>
+                    <p class="font-semibold text-white">- María Fernanda L.</p>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="bg-gray-900 rounded-xl shadow-lg p-6 border border-gray-700 flex flex-col items-center">
+                    <div class="text-orange-400 mb-3 text-2xl">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"Muy profesionales y atentos. La estructura metálica para nuestro techo fue instalada a tiempo y con una calidad impecable."</p>
+                    <p class="font-semibold text-white">- Juan Carlos R.</p>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="bg-gray-900 rounded-xl shadow-lg p-6 border border-gray-700 flex flex-col items-center">
+                    <div class="text-orange-400 mb-3 text-2xl">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"La baranda de acero inoxidable le dio un toque muy moderno a nuestra casa. El equipo de Ornamentación Los Gómez es muy talentoso."</p>
+                    <p class="font-semibold text-white">- Sofía P.</p>
+                </div>
+                <!-- Puedes añadir más testimonios aquí siguiendo la misma estructura -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Generador de Ideas de Diseño con Gemini API -->
+    <section id="ideas-diseno" class="py-16 md:py-24 bg-gray-50 text-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Generador de Ideas de Diseño ✨</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-700">
                 Describe tu visión para un proyecto de ornamentación (por ejemplo, "una baranda moderna para un balcón pequeño", o "ideas de puertas de seguridad con estilo rústico") y nuestro asistente de IA te dará algunas ideas creativas.
             </p>
-            <div class="max-w-xl mx-auto bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700">
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                 <div class="mb-6">
-                    <textarea id="designPrompt" rows="6" placeholder="Ej: Necesito ideas para una reja de jardín con motivos florales y un toque clásico." class="w-full p-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                    <textarea id="designPrompt" rows="6" placeholder="Ej: Necesito ideas para una reja de jardín con motivos florales y un toque clásico." class="w-full p-3 rounded-md bg-gray-100 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
                 </div>
                 <button id="generateDesignBtn" class="bg-orange-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-orange-600 transition duration-300 ease-in-out btn-primary">
                     Generar Ideas ✨
                     <span id="loader" class="loader hidden"></span>
                 </button>
-                <div id="designOutput" class="mt-8 p-6 bg-gray-700 rounded-lg text-left text-gray-100 border border-gray-600 hidden">
-                    <p class="font-semibold text-orange-400 mb-2">Ideas Generadas:</p>
+                <div id="designOutput" class="mt-8 p-6 bg-orange-50 rounded-lg text-left text-gray-700 border border-orange-200 hidden">
+                    <p class="font-semibold text-orange-700 mb-2">Ideas Generadas:</p>
                     <div id="designContent"></div>
                 </div>
-                <div id="errorMessage" class="mt-4 text-red-400 hidden">
+                <div id="errorMessage" class="mt-4 text-red-600 hidden">
                     Hubo un error al generar las ideas. Por favor, inténtalo de nuevo más tarde.
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Sección de Contacto -->
     <section id="contacto" class="py-16 md:py-24 bg-gray-900 text-white">
@@ -241,7 +279,7 @@
                     <!-- Botón de WhatsApp -->
                     <a href="https://wa.me/573025811973" target="_blank" class="btn-whatsapp">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.031 2.001c-5.522 0-10 4.478-10 10 0 1.954.542 3.805 1.488 5.433L2 22l4.757-1.472c1.53.834 3.266 1.285 5.274 1.285h.001c5.522 0 10-4.478 10-10s-4.478-10-10-10zm0 18.272c-1.74 0-3.37-.478-4.786-1.31l-.341-.199-3.535 1.096 1.11-3.447-.225-.357c-.985-1.565-1.503-3.37-1.503-5.252 0-4.502 3.65-8.152 8.152-8.152 2.186 0 4.25.85 5.807 2.397s2.397 3.621 2.397 5.807c0 4.502-3.65 8.152-8.152 8.152zm4.383-6.464c-.235-.118-.87-.43-.997-.478-.127-.047-.275-.071-.39-.071-.115 0-.275.047-.39.071-.115.047-.447.177-.547.292-.099.115-.199.125-.374.062-.175-.062-.422-.157-.803-.495-.38-.337-.997-.997-1.397-1.614-.4-.617-.047-.957.26-.118.09-.047.199-.118.299-.177.099-.047.199-.071.299-.118.099-.047.15-.118.225-.235.075-.118.025-.21-.025-.299-.05-.09-.39-.945-.539-1.285-.149-.341-.125-.292-.275-.357-.125-.062-.275-.062-.39-.062-.115 0-.299.047-.45.21-.15.165-.575.565-.575 1.372 0 .807.589 1.59.676 1.69.088.099 1.159 1.777 2.81 2.407 1.65.63 1.65.422 1.949.397.299-.025.87-.357.997-.43.127-.075.235-.118.335-.177.099-.047.175-.118.25-.235.075-.118.125-.21.075-.299z"/>
+                            <path d="M12.031 2.001c-5.522 0-10 4.478-10 10 0 1.954.542 3.805 1.488 5.433L2 22l4.757-1.472c1.53.834 3.266 1.285 5.274 1.285h.001c5.522 0 10-4.478 10-10s-4.478-10-10-10zm0 18.272c-1.74 0-3.37-.478-4.786-1.31l-.341-.199-3.535 1.096 1.11-3.447-.225-.357c-.985-1.565-1.503-3.37-1.503-5.252 0-4.502 3.65-8.152 8.152-8.152 2.186 0 4.25.85 5.807 2.397s2.397 3.621 2.397 5.807c0 4.502-3.65 8.152-8.152 8.152zm4.383-6.464c-.235-.118-.87-.43-.997-.478-.127-.047-.275-.071-.39-.071-.115 0-.275.047-.39.071-.115.047-.447.177-.547.292-.099.115-.199.125-.374.062-.175-.062-.422-.157-.803-.495-.38-.337-.997-.997-1.397-1.614-.4-.617-.047-.957.26-.118.09-.047.199-.118.299-.177.099-.047.15-.118.225-.235.075-.118.025-.21-.025-.299-.05-.09-.39-.945-.539-1.285-.149-.341-.125-.292-.275-.357-.125-.062-.275-.062-.39-.062-.115 0-.299.047-.45.21-.15.165-.575.565-.575 1.372 0 .807.589 1.59.676 1.69.088.099 1.159 1.777 2.81 2.407 1.65.63 1.65.422 1.949.397.299-.025.87-.357.997-.43.127-.075.235-.118.335-.177.099-.047.175-.118.25-.235.075-.118.125-.21.075-.299z"/>
                         </svg>
                         WhatsApp
                     </a>
